@@ -1,0 +1,62 @@
+<html>
+<head>
+    <title>Bank Details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <style>
+        form input{
+        width:100%;
+        border-color: #e6e6e6;
+        border-radius:5%;
+        }
+    </style>
+</head>
+<body>
+<br><br>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-4 card card-body">
+        <div class="alert alert-dark">
+          Get Branch Details
+        </div>
+        <form method="get" action="/search">
+          <div class="form-group">
+            <label>IFSC Code</label>
+              <input type="text" name="search" id="search" class="form-control">
+            <small  class="form-text text-muted">We'll never share your data with anyone else.</small>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-4 card card-body">
+    <div class="container-fluid">
+        <div class="alert alert-dark">
+          Get Branch Details in your city
+        </div>
+        <form method="get" action="/search1">
+          <div class="form-group">
+            <label>Bank Name</label>
+              <div class="form-group">
+                  <input type="text" name="bank" class="form-control">
+              </div>
+          </div>
+          <div class="form-group">
+            <label>City</label>
+            <input type="text" name="city" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    </div>
+        <div class="col-md-1"></div>
+    </div>
+</body>
+</html>

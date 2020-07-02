@@ -1,0 +1,13 @@
+from django.forms import ModelForm
+from .models import *
+from django import forms
+
+class BankForm(ModelForm):
+    class Meta:
+        model=Bank
+        fields=('account_number','IFSCCode','city','branch','name_of_bank','username')
+        widget={
+            'IFSCCode':forms.TextInput(attrs={'class':'form-control'}),
+            'city' :forms.TextInput(attrs={'class': 'form-control'}),
+            'name_of_bank': forms.TextInput(attrs={'class': 'form-control'}),
+        }
